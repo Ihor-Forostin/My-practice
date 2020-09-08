@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ihor Forostin summer practice</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>iF</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Про мене" onclick="slowScroll('#main')">Про мене</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Моя політехніка">Моя політехніка</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Моя політехніка">Відеозвернення</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Контакти та посилання">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Мій вибір - </h1>
+    <h2>Дніпровська політехніка!</h2>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Хто я?</h2>
+
+    </div>
+<div class="photo">
+  <img src="https://i.ibb.co/G3bmRP9/AAA-3535.jpg" alt="">
+
+</div>
+    <div class="text">
+      <h1>Коротко про мене:
+      </h1>
+
+      <ul>
+        <li>Ім'я - Ігор</li>
+        <li>Прізвище - Форостін</li>
+        <li>Місце народження - Дніпропетровськ</li>
+        <li>Місце навчання - НВК№4, СЗШ №5</li>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Ділюся думками</h2>
+
+    <div class="vid">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ciB0gN7a6Ns" style="max-width: 100%; max-height: 100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+    <div class="text">
+  <p align="justify">Особисто у мене бажання навчатися в НТУ"ДП" виникло ще у школі і з вибором вишу я визначився швидко.
+     Вагомими аргументами особисто для мене стали високий рівень навчання, популярність вишу, зручне місцерозташування
+     та прилегла інфраструтура (заклади харчування, магазини, компактне розташування корпусів та безпосередня зручність проїзду з будь-якої точки міста).
+      Також не останню роль зіграло й те, що саме Дніпровську політехніку обрала більшість моїх знайомих, що підтверджує її високий статус як навчального закладу а також гарантує веселе дозвілля.
+      Після двох років навчання тут я жодного разу не пошкодував про свій вибір і можу сміливо рекоментувати НТУ"ДП" усім абітурієнтам для подачі заяв!</p>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Зворотній зв'язок</h5></center>
+    <form id="form_input">
+      <label for="name">Ім'я <span>*</span></label><br>
+      <input type="text" placeholder="Введіть ім'я" name="name" id="name"><br>
+      <label for="email">Ваша пошта <span>*</span></label><br>
+			<input type="email" placeholder="Введіть email" name="email" id="email"><br>
+			<label for="message">Текст повідомлення <span>*</span></label><br>
+			<textarea placeholder="Введіть повідомлення" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Відправити</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Сторінка університету</span><br>
+
+    <a href="https://www.nmu.org.ua/ua/">ТУТ</a>
+</div>
+    <div>
+      <span class="title">Сторінка кафедри</span><br>
+        <a href="http://pzks.nmu.org.ua">ТУТ</a>
+
+    </div>
+    <div>
+      <span class="title">Мене шукати</span><br>
+      <a href="https://www.instagram.com/y_photo_dn/?hl=bg">ТУТ</a>
+
+    </div>
+
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
